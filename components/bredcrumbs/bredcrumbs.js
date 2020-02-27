@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react'
+=======
+import React from 'React'
+>>>>>>> 65b85e2c0f1a330fe1ac3806a887b9036a9e29c0
 const BreadCrumbs = () => {
 	return (
 		<>

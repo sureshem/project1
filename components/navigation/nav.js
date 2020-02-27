@@ -3,11 +3,22 @@ import Link from 'next/link';
 
 export class nav extends Component {
     render() {
+<<<<<<< HEAD
         return (
             <>
             <div className="wdnavigation">
                 <Link href="/"><a  className="wdnavigation__link">Home</a></Link>
                 <Link href="/allvendors" prefetch><a  className="wdnavigation__link">Search Vendors</a></Link>
+=======
+        const onreload = () => {
+            window.location.reload
+        }
+        return (
+            <>
+            <div className="wdnavigation">
+                <Link href="/"><a  className="wdnavigation__link" onClick={() => onreload()}>Home</a></Link>
+                <Link href="/community" prefetch><a  className="wdnavigation__link">Search Vendors</a></Link>
+>>>>>>> 65b85e2c0f1a330fe1ac3806a887b9036a9e29c0
                 <Link href="/community" prefetch><a  className="wdnavigation__link">Location</a></Link>
                 <Link href="/community" prefetch><a  className="wdnavigation__link">Real Wedding</a></Link>
                 <Link href="/blog" prefetch><a  className="wdnavigation__link">Blogs</a></Link>

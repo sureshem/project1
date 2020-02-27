@@ -2,10 +2,16 @@ import React,{useEffect,useState} from 'react';
 import Link from 'next/link';
 
 const vendorlist = () => {
+<<<<<<< HEAD
     const [reviewPopup, setreviewPopup] = useState(false)
     useEffect(() =>{
 
     }, [])
+=======
+    const onreload = () => {
+        window.location.reload
+    }
+>>>>>>> 65b85e2c0f1a330fe1ac3806a887b9036a9e29c0
     return (
         <div className="wevendorlist">
             <div className="container">

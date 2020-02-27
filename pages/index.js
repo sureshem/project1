@@ -5,7 +5,6 @@ import FindWeddingVendor from '../components/vendorinfo/findingvendorinfo';
 import WeddingVendorTypes from '../components/vendorinfo/weddingvendortypes';
 import AllvendorCategories from '../components/vendorinfo/allvendorcategories';
 import Errorboundry from '../components/errorboundry/errorboundry';
-
 import fetch from 'isomorphic-unfetch';
 
 const Home = (props) => {

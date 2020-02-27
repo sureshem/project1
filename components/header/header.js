@@ -2,17 +2,34 @@ import React, {useState} from 'react';
 import Link from 'next/link'
 import Navig from '../navigation/nav';
 import VendorList from '../navigation/vendorlist';
+<<<<<<< HEAD
 import InnerData from '../popup/inner__data';
 import InputType from '../form__inputs/inputtype';
 import PrimaryBtn from '../buttons/primaryButton';
 const header = () => {
     const [signuppopupOpen,setsignuppopupOpen] = useState(false)
     const [signinpopupOpen,setsigninpopupOpen] = useState(false)
+=======
+import Popup from '../popup/popup';
+import InputType from '../form__inputs/inputtype';
+import PrimaryBtn from '../buttons/primaryButton';
+const header = () => {
+    const [SignUppopupOpen, setSignUppopupOpen] = useState(false)
+    const [SignInpopupOpen, setSignInpopupOpen] = useState(false)
+    const onSignupClick = () => {
+        setSignUppopupOpen(true)
+    }
+    {SignInpopupOpen ? document.body.classList.add('overflowHidden') : document.body.classList.remove('overflowHidden')}
+    const onSigInpClick = () => {
+        setSignInpopupOpen(true)
+    }
+>>>>>>> 65b85e2c0f1a330fe1ac3806a887b9036a9e29c0
     var inputPlaceholder=["Your email address","Password"];
     var inputs=[];
     for(var i=0;i<inputPlaceholder.length;i++){
         inputs.push(<InputType  placeholder={inputPlaceholder[i]} />);
     }
+<<<<<<< HEAD
     const openSignup = () => {
         setsignuppopupOpen(true)
     }
@@ -76,12 +93,77 @@ const header = () => {
                 <section className="wduser__register__login">
                     <span onClick={() => openSignup()} className="wduser__register__login__link wduser__register__login__link--heighlight">Sign Up</span>
                     <span onClick={() => openSignin()}  className="wduser__register__login__link">Log In</span>
+=======
+    let signUp = (
+        <>
+        <section className="wdpopup__signup">
+            {inputs}
+            <p className="wdpopup__signup__agree">By clicking ‘Sign Up’, I agree to The Knot's &nbsp;
+                <a  className="wdpopup__signup__agree__link" target="_blank" href="/privacy-policy">Privacy Policy</a> &nbsp;and&nbsp;
+                <a className="wdpopup__signup__agree__link" target="_blank" rel="noopener" href="/terms-and-conditions">Terms of Use</a>.
+            </p>
+            <section className="wdmatchbanner__detail__info__submitBtn">
+                <PrimaryBtn />
+            </section>
+            <p className="wdpopup__signup__agree">Send me wedding ideas, tips, <a target="_blank" className="wdpopup__signup__agree__link"  href="/terms-and-conditions">Log In</a></p>  
+        </section>   
+        <style jsx>
+            {
+                `               
+					.wdpopup__signup__agree{font-size:14px; line-height:18px; text-align: center;margin:12px 0;display: flex; justify-content: center;}
+					.wdpopup__signup__agree__link{font-weight: 600;color: #1A1A1A;}
+					.wdmatchbanner__detail__info__submitBtn{text-align:center}
+                `
+            }
+        </style>
+        </>
+    )
+    let signIn = (
+        <>
+        <section className="wdpopup__signup">
+            {inputs}
+            <p className="wdpopup__signup__agree"><a className="wdpopup__signup__agree__link" target="_blank" href="/terms-and-conditions">Forgot password?</a>.
+            </p>
+            <section className="wdmatchbanner__detail__info__submitBtn">
+                <PrimaryBtn />
+            </section>
+            <p className="wdpopup__signup__agree">Are you a vendor?  <a target="_blank" className="wdpopup__signup__agree__link"  href="/terms-and-conditions">Are you a vendor? </a></p>  
+            <p className="wdpopup__signup__agree">Not a member yet?  <a target="_blank" className="wdpopup__signup__agree__link"  href="/terms-and-conditions">Join now!</a></p>  
+        </section>  
+        <style jsx>
+            {
+                `               
+					.wdpopup__signup__agree{font-size:14px; line-height:18px; text-align: center;margin:12px 0;display: flex; justify-content: center;}
+					.wdpopup__signup__agree__link{font-weight: 600;color: #1A1A1A;}
+					.wdmatchbanner__detail__info__submitBtn{text-align:center}
+                `
+            }
+        </style>
+        </>
+    )
+    console.log(SignUppopupOpen,"asf")
+    return (        
+        <header className="wdheader">
+            <section className="container">
+            <section className="wdheader__info">
+                <a className="wdheader__link" href="/"><img src="http://www.magzter.com/static/images/maglogo/magzlogo__.svg" className="wdheader__logoimg"/></a>
+                <Navig />
+                <section className="wduser__register__login">
+                    <span onClick={() => onSignupClick()} className="wduser__register__login__link wduser__register__login__link--heighlight">Sign Up</span>
+                    <span onClick={() => onSigInpClick()} className="wduser__register__login__link">Log In</span>
+>>>>>>> 65b85e2c0f1a330fe1ac3806a887b9036a9e29c0
                 </section>
             </section>
             </section>
             <VendorList />
+<<<<<<< HEAD
            {/*  {signinpopupOpen ? <InnerData></InnerData> : "" }
             {signuppopupOpen ? <InnerData></InnerData> : "" } */}
+=======
+            {SignUppopupOpen ? <Popup isOpen={SignUppopupOpen} onClose={() => setSignUppopupOpen(false)}>{signUp}</Popup> : ""}
+            {SignInpopupOpen ? <Popup isOpen={SignInpopupOpen} onClose={() => setSignInpopupOpen(false)}>{signIn}</Popup> : ""}
+            
+>>>>>>> 65b85e2c0f1a330fe1ac3806a887b9036a9e29c0
             <style jsx>
                 {
                     `
@@ -97,9 +179,12 @@ const header = () => {
                 }
             </style>
         </header>
+<<<<<<< HEAD
         {signuppopupOpen ? <InnerData onClose={() => setsignuppopupOpen(false)} isOpen={signuppopupOpen}>{signupContent} </InnerData> : ""}
         {signinpopupOpen ? <InnerData onClose={() => setsigninpopupOpen(false)} isOpen={signinpopupOpen}>{signinContent} </InnerData> : ""}
         </>
+=======
+>>>>>>> 65b85e2c0f1a330fe1ac3806a887b9036a9e29c0
     );
     
 }
