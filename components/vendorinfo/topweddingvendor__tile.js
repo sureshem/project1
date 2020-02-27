@@ -16,11 +16,7 @@ const topweddingvendor__tile = (props) => {
             <style jsx>
                 {
                     `
-<<<<<<< HEAD
                     .topvendor__tile{grid-template-columns: repeat(3,400px);grid-gap: 1.25rem;justify-content: flex-start;padding-left: 10px; padding-right: 10px; margin-bottom: 0; margin-top: 0;display: grid;}
-=======
-                    .topvendor__tile{grid-template-columns: repeat(4,300px);grid-gap: 1.25rem;justify-content: flex-start;padding-left: 10px; padding-right: 10px; margin-bottom: 0; margin-top: 0;display: grid;}
->>>>>>> 65b85e2c0f1a330fe1ac3806a887b9036a9e29c0
                     .topvendor__tile__info{position: relative;width: 300px; height: 250px;overflow: hidden; border-radius: 5px;}
                     .topvendor__tile__info__icon{height:28px;width:34px;margin-right:5px;}
                     .topvendor__tile__info__detail{font-size:17px; line-height:18px;color:#fff;}
